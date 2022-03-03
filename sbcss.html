@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            font-family: 'microsoft yahei';
+            color: #4A4A4A;
+        }
+        .upload{
+            width: 750px;
+            padding: 20px;
+            border: 1px dashed #ccc;
+            margin: 100px auto;
+            border-radius: 5px;
+        }
+        .uploadBox{
+            width: 100%;
+            height: 35px;
+            position: relative;
+        }
+        .uploadBox input{
+            width: 200px;
+            height: 30px;
+            background: red;
+            position: absolute;
+            top: 2px;
+            left: 0;
+            z-index: 201;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .uploadBox .inputCover{
+            width: 200px;
+            height: 30px;
+            position: absolute;
+            top: 2px;
+            left: 0;
+            z-index: 200;
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+            border: 1px solid #009393;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .uploadBox button.submit{
+            width: 100px;
+            height: 30px;
+            position: absolute;
+            left: 230px;
+            top: 2px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: #F0F0F0;
+            outline: none;
+            cursor: pointer;
+        }
+        .uploadBox button.submit:hover{
+            background: #E0E0E0;
+        }
+        .uploadBox button.upagain{
+            width: 100px;
+            height: 30px;
+            position: absolute;
+            left: 340px;
+            top: 2px;
+            display: none;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background: #F0F0F0;
+            outline: none;
+            cursor: pointer;
+        }
+        .uploadBox button.upagain:hover{
+            background: #E0E0E0;
+        }
+        .processBar{
+            display: inline-block;
+            width: 0;
+            height: 7px;
+            position: absolute;
+            left: 500px;
+            top: 14px;
+            background: #009393;
+        }
+        .processNum{
+            position: absolute;
+            left: 620px;
+            color: #009393;
+            font-size: 12px;
+            line-height: 35px;
+        }
+    </style>
+    <style type="text/css">
+        #parent {
+            width: 200px;
+            height: 4px;
+            /*border: 0px solid gray; */
+            background: lightgray;
+            display: none;
+        }
+        #son {
+            width: 0;
+            height: 100%;
+            background: #009393;
+            text-align: center;
+        }
+        .processNum{
+            position: absolute;
+            left: 620px;
+            color: #009393;
+            font-size: 12px;
+            line-height: 35px;
+        }
+    </style>
+</head>
+<body>
+<div class="upload">
+    <div class="uploadBox">
+        <span class="inputCover">选择文件</span>
+        <form enctype="">
+            <input type="file" name="file" id="file" />
+            <button type="button" class="submit">上传</button>
+        </form>
+        <button type="button" class="upagain">继续上传</button>
+        <span class="processBar"></span>
+        <span class="processNum">未选择文件</span>
+    </div>
+</div>
+
+<div class="upload">
+    <div class="uploadBox">
+        <span class="inputCover">选择文件</span>
+        <form enctype="">
+            <input type="file" name="file" id="file" />
+            <button type="button" class="submit">上传</button>
+        </form>
+        <button type="button" class="upagain">继续上传</button>
+        <span class="processBar"></span>
+        <span class="processNum">未选择文件</span>
+    </div>
+</div>
+
+<div class="upload">
+    <div class="uploadBox">
+        <span class="inputCover">选择文件</span>
+        <form enctype="">
+            <input type="file" name="userfile" id="userfile3"/>
+            <button type="button" class="submit">上传</button>
+        </form>
+<!--        <button type="button" class="upagain">继续上传</button>-->
+        <div id="parent">
+            <div id="son"></div>
+        </div>
+<!--        <span class="processBar"></span>-->
+        <span class="processNum">未选择文件</span>
+    </div>
+</div>
+
+
+</body>
+</html>
